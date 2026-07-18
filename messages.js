@@ -1,5 +1,5 @@
 // messages.js
-export const translations = {
+window.translations = {
   pt_BR: {
     metaDescription: "SideContextAI - Extensão Chrome premium de IA em painel lateral com leitura de contexto ativo de página, captura de tela, exportação para Drive e Markdown.",
     navTitle: "SideContextAI",
@@ -30,7 +30,7 @@ export const translations = {
     step3Desc: "Habilite a opção 'Modo do desenvolvedor' no seletor localizado no canto superior direito.",
     step4Title: "4. Carregar Extensão",
     step4Desc: "Clique em 'Carregar sem compactação' e selecione o diretório raiz do projeto SideContextAI.",
-    footerText: "Desenvolvido com foco em produtividade, privacidade e excelência visual. Licenciado sob MIT.",
+    footerText: "© 2026 Bifrost Solutions. Todos os direitos reservados. SideContextAI é uma marca comercial da Bifrost Solutions.",
     
     // Privacy and Terms additions
     privacyLink: "Política de Privacidade",
@@ -89,7 +89,7 @@ export const translations = {
     step3Desc: "Turn on the 'Developer mode' toggle switch in the upper-right corner of the screen.",
     step4Title: "4. Load Unpacked",
     step4Desc: "Click 'Load unpacked' and select the root folder of the SideContextAI extension.",
-    footerText: "Built with a focus on productivity, privacy, and visual excellence. MIT Licensed.",
+    footerText: "© 2026 Bifrost Solutions. All rights reserved. SideContextAI is a trademark of Bifrost Solutions.",
     
     // Privacy and Terms additions
     privacyLink: "Privacy Policy",
@@ -127,7 +127,7 @@ export const translations = {
     sectionFeaturesTitle: "Beneficios y Características",
     sectionFeaturesSub: "Todo lo que necesitas para navegar de forma inteligente y productiva.",
     featureContextTitle: "Contexto Limpio",
-    featureContextDesc: "Lee y analiza dinámicamente hasta 30,000 caracteres de texto de la pestaña activa, ignorando menús, anuncios y pies de página.",
+    featureContextDesc: "Lee y analiza dinamicamente hasta 30,000 caracteres de texto de la pestaña activa, ignorando menús, anuncios y pies de página.",
     featureMultimodalTitle: "Soporte Multimodal",
     featureMultimodalDesc: "Adjunta capturas de pantalla de tu pestaña activa para que modelos como Gemini y Claude las analicen visualmente.",
     featureProvidersTitle: "7 Proveedores Globales",
@@ -148,13 +148,13 @@ export const translations = {
     step3Desc: "Habilita la opción 'Modo de desarrollador' ubicada en la esquina superior derecha.",
     step4Title: "4. Cargar Extensión",
     step4Desc: "Haz clic en 'Cargar descomprimida' y selecciona el directorio raíz del proyecto SideContextAI.",
-    footerText: "Desarrollado con enfoque en productividad, privacidad y excelencia visual. Licencia MIT.",
+    footerText: "© 2026 Bifrost Solutions. Todos los derechos reservados. SideContextAI es una marca comercial de Bifrost Solutions.",
     
     // Privacy and Terms additions
     privacyLink: "Política de Privacidad",
-    termsLink: "Términos de Servicio",
+    termsLink: "Términos de Serviço",
     privacyTitle: "Política de Privacidad",
-    privacySubtitle: "Transparencia y privacidad. Tus datos bajo tu absoluto control.",
+    privacySubtitle: "Transparía y privacidad. Tus datos bajo tu absoluto control.",
     privacyIntro: "Esta política rige SideContextAI, desarrollado por Bifrost Solutions. Valoramos profundamente su privacidad y la seguridad de su información.",
     privacySec1Title: "1. Sin Recopilación de Datos",
     privacySec1Desc: "Bifrost Solutions NO recopila, almacena, transmite ni comparte ningún dato personal, claves de API o historial de chat en nuestros servidores. Toda la persistencia de datos se gestiona localmente en su navegador mediante almacenamiento local seguro (chrome.storage.local).",

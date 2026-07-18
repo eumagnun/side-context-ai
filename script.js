@@ -1,17 +1,18 @@
 // script.js
-import { translations } from './messages.js';
-
 let currentLang = localStorage.getItem('landing_lang') || 'pt_BR';
 
 function updateUI() {
-  const dictionary = translations[currentLang] || translations['pt_BR'];
+  const translations = window.translations || {};
+  const dictionary = translations[currentLang] || translations['pt_BR'] || {};
   
   // Update HTML Lang attribute
   document.documentElement.lang = currentLang.split('_')[0];
   
   // Set Meta Description
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute('content', dictionary.metaDescription);
+  if (metaDesc && dictionary.metaDescription) {
+    metaDesc.setAttribute('content', dictionary.metaDescription);
+  }
 
   // Translate all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -28,6 +29,7 @@ function updateUI() {
 }
 
 function setLanguage(lang) {
+  const translations = window.translations || {};
   if (translations[lang]) {
     currentLang = lang;
     localStorage.setItem('landing_lang', lang);
