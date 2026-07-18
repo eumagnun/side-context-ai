@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SideContextAI — Inteligência Artificial em Painel Lateral no Navegador</title>
+  <meta name="description" content="SideContextAI - Extensão Chrome premium de IA em painel lateral com leitura de contexto ativo de página, captura de tela, exportação para Drive e Markdown.">
+  
+  <!-- SEO & OpenGraph -->
+  <meta property="og:title" content="SideContextAI — Inteligência Artificial em Painel Lateral no Navegador">
+  <meta property="og:description" content="Converse com Gemini, OpenAI, Anthropic Claude, Meta, DeepSeek, Qwen e Kimi usando o conteúdo da página ativa como contexto instantâneo.">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span data-i18n="navTitle">SideContextAI</span>
+    </div>
+    
+    <div class="lang-selector">
+      <button class="lang-btn active" data-lang="pt_BR" id="lang-pt">PT</button>
+      <button class="lang-btn" data-lang="en" id="lang-en">EN</button>
+      <button class="lang-btn" data-lang="es" id="lang-es">ES</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content scroll-reveal">
+      <h2 class="hero-title" data-i18n="heroTitle">Sua navegação web guiada por Inteligência Artificial</h2>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">Uma extensão premium para o Chrome que adiciona um painel lateral inteligente. Converse com os melhores LLMs do mercado usando o conteúdo e capturas da página ativa como contexto.</p>
+      <div class="hero-ctas">
+        <a href="#install" class="btn-primary" data-i18n="ctaInstall">Instalar Extensão</a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-i18n="ctaSource">Ver no GitHub</a>
+      </div>
+    </div>
+    
+    <div class="hero-mockup scroll-reveal delay-1">
+      <!-- High fidelity extension UI preview in CSS -->
+      <div class="extension-preview">
+        <div class="mock-header">
+          <div class="mock-header-dot"></div>
+          <span>SideContextAI</span>
+        </div>
+        
+        <div class="mock-chat">
+          <div class="mock-msg assistant">
+            Olá! Eu sou o assistente do <strong>SideContextAI</strong>. Como posso te ajudar a analisar a página atual?
+          </div>
+          <div class="mock-msg user">
+            Explique os pontos chaves da documentação aberta na aba.
+          </div>
+          <div class="mock-msg assistant">
+            Baseado no contexto da página ativa, os pontos mais importantes são a facilidade de integração via API, a segurança local e a compatibilidade de layouts responsivos...
+          </div>
+        </div>
+
+        <div class="mock-context">
+          <span class="mock-badge">CONTEXTO</span>
+          <span class="mock-title">Documentação Geral da API</span>
+        </div>
+
+        <div class="mock-toolbar">
+          <div class="mock-tool">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><polyline points="3 3 3 8 8 8"></polyline></svg>
+          </div>
+          <div class="mock-tool">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <div class="mock-tool">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+          </div>
+          <div class="mock-tool">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </div>
+          <div class="mock-tool">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+        </div>
+
+        <div class="mock-input-area">
+          <div class="mock-input">Digite uma pergunta...</div>
+          <div class="mock-send">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="section-header scroll-reveal">
+      <h2 class="section-title" data-i18n="sectionFeaturesTitle">Benefícios & Recursos</h2>
+      <p class="section-subtitle" data-i18n="sectionFeaturesSub">Tudo o que você precisa para navegar com inteligência e produtividade.</p>
+    </div>
+    
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card scroll-reveal">
+        <div class="feature-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
+        <h3 data-i18n="featureContextTitle">Contexto Limpo de Página</h3>
+        <p data-i18n="featureContextDesc">Lê e analisa dinamicamente até 30.000 caracteres de texto do corpo principal da aba ativa, ignorando automaticamente cabeçalhos, rodapés e anúncios.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card scroll-reveal delay-1">
+        <div class="feature-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        </div>
+        <h3 data-i18n="featureMultimodalTitle">Suporte Multimodal</h3>
+        <p data-i18n="featureMultimodalDesc">Anexe capturas de tela (prints) da área visível da sua aba ativa e envie para modelos multimodais como o Gemini e Claude analisarem visualmente.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card scroll-reveal delay-2">
+        <div class="feature-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+        </div>
+        <h3 data-i18n="featureProvidersTitle">7 Provedores Globais</h3>
+        <p data-i18n="featureProvidersDesc">Configure e alterne em tempo real entre Google Gemini, OpenAI, Anthropic Claude, Meta, DeepSeek, Qwen e Kimi.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="feature-card scroll-reveal">
+        <div class="feature-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+        </div>
+        <h3 data-i18n="featureDriveTitle">Exportação em Nuvem</h3>
+        <p data-i18n="featureDriveDesc">Integre sua conta do Google Drive para salvar conversas completas formatadas em pastas personalizadas com layout rico em HTML.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="feature-card scroll-reveal delay-1">
+        <div class="feature-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </div>
+        <h3 data-i18n="featureLocalTitle">Download em Markdown</h3>
+        <p data-i18n="featureLocalDesc">Baixe o histórico completo da conversa localmente em Markdown (.md) estruturado com um único clique, sem permissões invasivas.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="feature-card scroll-reveal delay-2">
+        <div class="feature-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h3 data-i18n="featurePrivacyTitle">Privacidade e Segurança</h3>
+        <p data-i18n="featurePrivacyDesc">Suas credenciais e dados nunca tocam servidores intermediários. Tudo é salvo no armazenamento seguro local (chrome.storage.local) do seu navegador.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Install Section -->
+  <section class="section" id="install">
+    <div class="section-header scroll-reveal">
+      <h2 class="section-title" data-i18n="sectionInstallTitle">Instalação em 4 Passos</h2>
+      <p class="section-subtitle" data-i18n="sectionInstallSub">Como instalar a extensão no seu Chrome em modo desenvolvedor.</p>
+    </div>
+    
+    <div class="install-container">
+      <div class="step-card scroll-reveal">
+        <h3 data-i18n="step1Title">1. Baixe o Código</h3>
+        <p data-i18n="step1Desc">Faça o download do repositório contendo a pasta da extensão no seu computador.</p>
+      </div>
+      
+      <div class="step-card scroll-reveal delay-1">
+        <h3 data-i18n="step2Title">2. Gerenciar Extensões</h3>
+        <p data-i18n="step2Desc">Abra o navegador Google Chrome e digite chrome://extensions na barra de endereços.</p>
+      </div>
+      
+      <div class="step-card scroll-reveal delay-2">
+        <h3 data-i18n="step3Title">3. Ativar Modo Dev</h3>
+        <p data-i18n="step3Desc">Habilite a opção 'Modo do desenvolvedor' no seletor localizado no canto superior direito.</p>
+      </div>
+      
+      <div class="step-card scroll-reveal delay-3">
+        <h3 data-i18n="step4Title">4. Carregar Extensão</h3>
+        <p data-i18n="step4Desc">Clique em 'Carregar sem compactação' e selecione o diretório raiz do projeto SideContextAI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2z"></path></svg>
+        <span>SideContextAI</span>
+      </div>
+      <p data-i18n="footerText">Desenvolvido com foco em produtividade, privacidade e excelência visual. Licenciado sob MIT.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
