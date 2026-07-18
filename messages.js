@@ -57,7 +57,17 @@ window.translations = {
     termsSec3Title: "3. Isenção de Garantias",
     termsSec3Desc: "A extensão é fornecida 'como está'. Não oferecemos garantias de que o serviço será ininterrupto, visto que depende de serviços e APIs de terceiros que possuem suas próprias políticas e termos de serviço.",
     termsSec4Title: "4. Suporte e Contato",
-    termsSec4Desc: "Para suporte comercial, técnico ou sugestões relacionadas ao SideContextAI, você pode entrar em contato diretamente com nossa equipe técnica através do e-mail oficial: contato@bifrost-solutions.com."
+    termsSec4Desc: "Para suporte comercial, técnico ou sugestões relacionadas ao SideContextAI, você pode entrar em contato diretamente com nossa equipe técnica através do e-mail oficial: contato@bifrost-solutions.com.",
+
+    // Google Cloud OAuth Verification additions
+    oauthSectionTitle: "Google OAuth & Verificação de Escopos",
+    oauthSectionSub: "Esclarecimentos importantes sobre a finalidade da integração e o uso do Google OAuth no aplicativo.",
+    oauthPurposeTitle: "Finalidade e Propósito do Aplicativo",
+    oauthPurposeDesc: "O SideContextAI é um assistente de produtividade para navegadores. Sua finalidade é ajudar o usuário a interagir, resumir e analisar o conteúdo em texto e imagens de sua aba aberta de navegação ativa através da integração com modelos de inteligência artificial.",
+    oauthScopeTitle: "Uso do Escopo do Google Drive (drive.file)",
+    oauthScopeDesc: "A extensão requer acesso limitado ao escopo 'https://www.googleapis.com/auth/drive.file'. Este escopo é utilizado unicamente para possibilitar que você salve o histórico das suas conversas e análises de IA em formato de documento (.html rico) em seu próprio Google Drive, sob uma pasta padrão chamada 'Side Context AI Docs'. Nós não visualizamos, modificamos ou excluímos outros arquivos.",
+    oauthPrivacyTitle: "Privacidade Estrita",
+    oauthPrivacyDesc: "Nenhum token do Google OAuth, dados de consentimento ou arquivos exportados passam por servidores de backend da Bifrost Solutions. Toda a troca de dados e autenticação OAuth2 ocorre de forma isolada, direta e local entre o seu navegador Google Chrome e os endpoints oficiais da Google API."
   },
   en: {
     metaDescription: "SideContextAI - Premium Chrome AI sidebar extension with active page context reading, screenshot support, Drive and Markdown export.",
@@ -116,7 +126,17 @@ window.translations = {
     termsSec3Title: "3. Disclaimer of Warranties",
     termsSec3Desc: "The extension is provided 'as is'. We offer no warranties that the service will be uninterrupted, as it relies on third-party APIs and services that maintain their own terms of service and policies.",
     termsSec4Title: "4. Support and Contact",
-    termsSec4Desc: "For commercial support, technical help, or feedback regarding SideContextAI, you can reach out directly to our team at our official email: contato@bifrost-solutions.com."
+    termsSec4Desc: "For commercial support, technical help, or feedback regarding SideContextAI, you can reach out directly to our team at our official email: contato@bifrost-solutions.com.",
+
+    // Google Cloud OAuth Verification additions
+    oauthSectionTitle: "Google OAuth & Scope Verification",
+    oauthSectionSub: "Important clarifications detailing the purpose of the Google OAuth integration in this application.",
+    oauthPurposeTitle: "Purpose of the Application",
+    oauthPurposeDesc: "SideContextAI is a productivity tool for web browsers. Its goal is to allow users to interact, summarize, and analyze active web page content and screenshots through direct integration with top-tier artificial intelligence models.",
+    oauthScopeTitle: "Google Drive Scope Usage (drive.file)",
+    oauthScopeDesc: "The extension requests access to the 'https://www.googleapis.com/auth/drive.file' scope. This scope is used strictly to allow you to save your AI conversation histories and page analysis in formatted HTML document files directly in your own Google Drive account under a dedicated folder called 'Side Context AI Docs'. We do not access, view, or modify other files.",
+    oauthPrivacyTitle: "Strict Data Confidentiality",
+    oauthPrivacyDesc: "No Google OAuth tokens, credentials, or exported files are sent to Bifrost Solutions servers. The entire OAuth2 flow and API request sequence occur locally and securely inside your Google Chrome client."
   },
   es: {
     metaDescription: "SideContextAI - Extensión premium de Chrome con panel lateral de IA que lee el contexto activo de la página, capturas de pantalla, exportación a Drive y Markdown.",
@@ -131,7 +151,7 @@ window.translations = {
     featureMultimodalTitle: "Soporte Multimodal",
     featureMultimodalDesc: "Adjunta capturas de pantalla de tu pestaña activa para que modelos como Gemini y Claude las analicen visualmente.",
     featureProvidersTitle: "7 Proveedores Globales",
-    featureProvidersDesc: "Configura e intercambia en tiempo real entre Google Gemini, OpenAI, Anthropic Claude, Meta, DeepSeek, Qwen y Kimi.",
+    featureProvidersDesc: "Configura e intercambia en tempo real entre Google Gemini, OpenAI, Anthropic Claude, Meta, DeepSeek, Qwen y Kimi.",
     featureDriveTitle: "Exportación a la Nube",
     featureDriveDesc: "Integra tu cuenta de Google Drive para guardar chats completos formateados en HTML dentro de carpetas personalizadas.",
     featureLocalTitle: "Descarga Markdown",
@@ -139,7 +159,7 @@ window.translations = {
     featurePrivacyTitle: "Privacidad Local",
     featurePrivacyDesc: "Tus claves de API y conversaciones no tocan servidores intermediarios. Todo se guarda en el almacenamiento seguro de tu navegador.",
     sectionInstallTitle: "Instalación en 4 Pasos",
-    sectionInstallSub: "Cómo instalar la extensión en Google Chrome en modo desarrollador.",
+    sectionInstallSub: "Cómo instalar la extensión en Google Chrome en modo desenvolvedor.",
     step1Title: "1. Descarga el Código",
     step1Desc: "Descarga la carpeta de la extensão que contém os arquivos do projeto em sua computadora.",
     step2Title: "2. Administrar Extensiones",
@@ -167,14 +187,24 @@ window.translations = {
     
     termsTitle: "Términos de Servicio",
     termsSubtitle: "Condiciones y reglas de uso para el asistente SideContextAI.",
-    termsIntro: "Al utilizar la extensión SideContextAI, usted acepta los siguientes términos y condiciones proporcionados por Bifrost Solutions.",
+    termsIntro: "Al utilizar la extensão SideContextAI, usted acepta los siguientes términos y condiciones proporcionados por Bifrost Solutions.",
     termsSec1Title: "1. Licencia y Uso",
     termsSec1Desc: "Le otorgamos una licencia de uso personal e intransferible para la extensión. Está prohibido realizar ingeniería inversa o redistribuir el código comercial sin nuestra autorización previa por escrito.",
-    termsSec2Title: "2. Claves y Costos de Terceros",
+    termsSec2Title: "2. Claves y Costos de Terceiros",
     termsSec2Desc: "Usted es el único responsable de configurar sus claves de API. Cualquier cargo generado por el consumo de tokens con proveedores de IA es de su exclusiva responsabilidad.",
     termsSec3Title: "3. Descargo de Responsabilidad",
     termsSec3Desc: "La extensión se proporciona 'tal cual'. No ofrecemos garantías de que el servicio sea ininterrumpido, ya que depende de servicios y APIs de terceros que mantienen sus propios términos y políticas.",
     termsSec4Title: "4. Soporte y Contacto",
-    termsSec4Desc: "Para soporte comercial, ayuda técnica o sugerencias sobre SideContextAI, puede contactar directamente con nuestro equipo técnico a través del correo oficial: contato@bifrost-solutions.com."
+    termsSec4Desc: "Para soporte comercial, ayuda técnica o sugerencias sobre SideContextAI, puede contactar directamente con nuestro equipo técnico a través del correo oficial: contato@bifrost-solutions.com.",
+
+    // Google Cloud OAuth Verification additions
+    oauthSectionTitle: "Google OAuth y Verificación de Ámbitos",
+    oauthSectionSub: "Aclaraciones importantes sobre la finalidad de la integración y el uso de Google OAuth en la aplicación.",
+    oauthPurposeTitle: "Finalidad y Propósito de la Aplicación",
+    oauthPurposeDesc: "SideContextAI es un asistente de productividad para navegadores web. Su finalidad es ayudar a los usuarios a interactuar, resumir y analizar el contenido en texto e imágenes de su pestaña abierta a través de la integración directa con modelos de inteligencia artificial.",
+    oauthScopeTitle: "Uso del Ámbito de Google Drive (drive.file)",
+    oauthScopeDesc: "La extensión requiere acceso limitado al ámbito 'https://www.googleapis.com/auth/drive.file'. Este ámbito se utiliza únicamente para permitirle guardar sus historiales de conversación y análisis de IA en formato de documento (.html con estilo) directamente en su cuenta de Google Drive, en una carpeta predeterminada llamada 'Side Context AI Docs'. No visualizamos ni modificamos otros archivos.",
+    oauthPrivacyTitle: "Confidencialidad de Datos Estricta",
+    oauthPrivacyDesc: "Ningún token de Google OAuth, datos de consentimiento o archivos exportados se envían a los servidores de Bifrost Solutions. Todo el flujo de OAuth2 ocurre localmente en su cliente de Google Chrome."
   }
 };

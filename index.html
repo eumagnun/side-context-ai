@@ -161,6 +161,43 @@
     </div>
   </section>
 
+  <!-- Google Cloud Verification Section -->
+  <section class="section" id="google-verification" style="border-top: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.01);">
+    <div class="section-header scroll-reveal">
+      <h2 class="section-title" data-i18n="oauthSectionTitle">Google OAuth & Verificação de Escopos</h2>
+      <p class="section-subtitle" data-i18n="oauthSectionSub">Esclarecimentos importantes sobre a finalidade da integração e o uso do Google OAuth no aplicativo.</p>
+    </div>
+    
+    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <!-- Bloco 1: Finalidade -->
+      <div class="feature-card scroll-reveal">
+        <div class="feature-icon-wrapper" style="background: rgba(139, 92, 246, 0.1); color: var(--primary-hover);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h3 data-i18n="oauthPurposeTitle">Finalidade e Propósito do Aplicativo</h3>
+        <p data-i18n="oauthPurposeDesc" style="color: var(--text-secondary); line-height: 1.5; font-size: 14px;">O SideContextAI é um assistente de produtividade para navegadores. Sua finalidade é ajudar o usuário a interagir, resumir e analisar o conteúdo em texto e imagens de sua aba aberta de navegação ativa através da integração com modelos de inteligência artificial.</p>
+      </div>
+
+      <!-- Bloco 2: Escopo -->
+      <div class="feature-card scroll-reveal delay-1">
+        <div class="feature-icon-wrapper" style="background: rgba(99, 102, 241, 0.1); color: #6366f1;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <h3 data-i18n="oauthScopeTitle">Uso do Escopo do Google Drive (drive.file)</h3>
+        <p data-i18n="oauthScopeDesc" style="color: var(--text-secondary); line-height: 1.5; font-size: 14px;">A extensão requer acesso limitado ao escopo 'https://www.googleapis.com/auth/drive.file'. Este escopo é utilizado unicamente para possibilitar que você salve o histórico das suas conversas e análises de IA em formato de documento (.html rico) em seu próprio Google Drive, sob uma pasta padrão chamada 'Side Context AI Docs'. Nós não visualizamos, modificamos ou excluímos outros arquivos.</p>
+      </div>
+
+      <!-- Bloco 3: Privacidade -->
+      <div class="feature-card scroll-reveal delay-2">
+        <div class="feature-icon-wrapper" style="background: rgba(16, 185, 129, 0.1); color: var(--success-color);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h3 data-i18n="oauthPrivacyTitle">Privacidade Estrita</h3>
+        <p data-i18n="oauthPrivacyDesc" style="color: var(--text-secondary); line-height: 1.5; font-size: 14px;">Nenhum token do Google OAuth, dados de consentimento ou arquivos exportados passam por servidores de backend da Bifrost Solutions. Toda a troca de dados e autenticação OAuth2 ocorre de forma isolada, direta e local entre o seu navegador Google Chrome e os endpoints oficiais da Google API.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- How to Install Section -->
   <section class="section" id="install">
     <div class="section-header scroll-reveal">
